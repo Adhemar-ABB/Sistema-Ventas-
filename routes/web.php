@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\PresentacionController;
+use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,7 @@ Route::middleware('auth')->group(function () {
         'categorias' => CategoriaController::class,
         'marcas' => MarcaController::class,
         'presentaciones' => PresentacionController::class,
+        'productos' => ProductoController::class,
     ]);
 
 
