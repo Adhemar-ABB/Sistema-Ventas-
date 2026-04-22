@@ -13,13 +13,15 @@ Route::get('/', function () {
 
 Route::middleware('auth')->group(function () {
 
-    Route::resources([
+    /*Route::resources([
         'categorias' => CategoriaController::class,
         'marcas' => MarcaController::class,
         'presentaciones' => PresentacionController::class,
         'productos' => ProductoController::class,
-    ]);
+    ]);*/
 
+
+    Route::resource('categorias', CategoriaController::class);
 
     Route::resource('clientes', ClienteController::class);
 
