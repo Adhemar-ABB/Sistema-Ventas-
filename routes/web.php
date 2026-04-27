@@ -21,9 +21,19 @@ Route::middleware('auth')->group(function () {
     ]);*/
 
 
-    Route::resource('categorias', CategoriaController::class);
+  Route::get('/usuarios', [UserController::class, 'index'])->name('usuarios.index');
 
-    Route::resource('clientes', ClienteController::class);
+
+Route::resource('marcas', MarcaController::class);
+    
+Route::resource('proveedores', ProveedorController::class);
+
+Route::resource('categorias', CategoriaController::class);
+    
+
+    
+
+Route::resource('clientes', ClienteController::class);
 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
